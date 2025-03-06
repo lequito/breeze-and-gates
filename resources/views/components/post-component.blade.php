@@ -19,6 +19,13 @@
                     <h1 class="text-xl font-bold">{{ $post->title }}</h1>
                     <p class="mt-3">{{ $post->content }}</p>
                 </div>
+                <div class="mt-3 ps-5 text-end">
+                    @can('post.delete', $post)
+                       <a href="#" class="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-6 rounded">
+                            Deletar
+                       </a>
+                    @endcan
+                </div>
             </div>
         </div>
     </div>
